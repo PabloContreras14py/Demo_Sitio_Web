@@ -35,11 +35,11 @@
                 <span class="text-xl font-black tracking-wide">FC BARCELONA</span>
             </div>
             
-            <!-- Navegación con 3 pestañas -->
+            <!-- Navegación -->
             <nav class="flex space-x-6 font-bold text-sm uppercase tracking-wider">
-                <a href="/" class="hover:text-fcbGold transition-colors">Inicio</a>
-                <a href="/productos" class="hover:text-fcbGold transition-colors">Productos</a>
-                <a href="/nosotros" class="hover:text-fcbGold transition-colors">Nosotros</a>
+                <a href="{{ url_for('main.inicio') }}" class="hover:text-fcbGold transition-colors">Inicio</a>
+                <a href="{{ url_for('main.productos') }}" class="hover:text-fcbGold transition-colors">Productos</a>
+                <a href="{{ url_for('main.nosotros') }}" class="hover:text-fcbGold transition-colors">Nosotros</a>
             </nav>
 
             <!-- Botón de Modo Oscuro -->
