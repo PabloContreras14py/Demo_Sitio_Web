@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FC Barcelona - Tienda Oficial{% endblock %}</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        fcbBlue: '#004D98',
+                        fcbRed: '#A50044',
+                        fcbGold: '#EDBB00',
+                        fcbDark: '#0A1118'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gradient-to-b dark:from-black dark:to-purple-950 text-gray-800 dark:text-gray-100 min-h-screen flex flex-col transition-colors duration-300">
+
+    <!-- NAVBAR -->
+    <header class="bg-fcbBlue text-white shadow-lg sticky top-0 z-50 border-b-4 border-fcbGold">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo / Escudo del Barça -->
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 bg-fcbRed text-fcbGold flex items-center justify-center font-black rounded-full border-2 border-fcbGold shadow-md">
+                    FCB
+                </div>
+                <span class="text-xl font-black tracking-wide">FC BARCELONA</span>
+            </div>
+            
+            <!-- Navegación con 3 pestañas -->
+            <nav class="flex space-x-6 font-bold text-sm uppercase tracking-wider">
+                <a href="/" class="hover:text-fcbGold transition-colors">Inicio</a>
+                <a href="/productos" class="hover:text-fcbGold transition-colors">Productos</a>
+                <a href="/nosotros" class="hover:text-fcbGold transition-colors">Nosotros</a>
+            </nav>
+
+            <!-- Botón de Modo Oscuro -->
+            <button id="themeToggle" class="bg-fcbRed hover:bg-red-700 text-fcbGold px-3 py-1.5 rounded-lg text-xs font-bold transition border border-fcbGold">
+                🌙 / ☀️
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO DINÁMICO -->
+    <main class="flex-grow max-w-6xl mx-auto w-full px-4 py-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-fcbBlue text-white text-center py-4 border-t-4 border-fcbRed text-sm">
+        <p class="font-bold">Més que un club — © 2026 FC Barcelona Frontend Demo</p>
+    </footer>
+
+    <!-- JavaScript del Frontend -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
