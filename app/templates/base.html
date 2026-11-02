@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -21,6 +22,11 @@
         }
     </script>
 </head>
+
+<body
+    class="bg-gradient-to-br from-[#004D98] via-blue-900 to-[#A50044] dark:from-[#0a0512] dark:via-[#150a21] dark:to-[#2e0854] text-white min-h-screen flex flex-col transition-colors duration-500">
+</body>
+
 <!-- Fondo inicial Azulgrana oficial -->
 
 <body class="bg-gradient-to-br from-[#004D98] via-blue-900 to-[#A50044] text-white min-h-screen flex flex-col">
@@ -42,6 +48,10 @@
                 <a href="{{ url_for('main.inicio') }}" class="hover:text-fcbGold transition-colors">Inicio</a>
                 <a href="{{ url_for('main.productos') }}" class="hover:text-fcbGold transition-colors">Productos</a>
                 <a href="{{ url_for('main.nosotros') }}" class="hover:text-fcbGold transition-colors">Nosotros</a>
+                <button id="theme-toggle" class="p-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20">
+                    <span id="theme-icon">🌙</span>
+                </button>
+
             </nav>
         </div>
     </header>
@@ -55,6 +65,23 @@
     <footer class="bg-fcbBlue text-white text-center py-4 border-t-4 border-fcbRed text-sm">
         <p class="font-bold">Més que un club — © 2026 FC Barcelona Frontend Demo</p>
     </footer>
+
+    <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+        themeIcon.textContent = '☀️';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeIcon.textContent = isDark ? '☀️' : '🌙';
+    });
+</script>
 
 </body>
 
