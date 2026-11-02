@@ -3,78 +3,70 @@
 {% block title %}Productos - FC Barcelona Tienda{% endblock %}
 
 {% block content %}
-<h1 class="text-3xl font-black text-center mb-8 uppercase tracking-wider text-fcbGold drop-shadow-md">
+<h1 class="text-3xl font-black text-center mb-8 uppercase tracking-wider text-fcbBlue dark:text-fcbGold">
     Nuestros Productos
 </h1>
 
 <!-- SECCIÓN DE PRODUCTOS EN TARJETAS (GRID) -->
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
+    
     <!-- Producto 1 -->
-    <div
-        class="bg-white text-gray-900 border border-gray-200 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col justify-between">
+    <div class="bg-white dark:bg-white/5 border border-gray-200 dark:border-purple-800/40 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col justify-between">
         <div>
-            <div class="w-full h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                <span class="text-gray-400 font-semibold text-sm">Imagen Producto</span>
+            <div class="w-full h-48 bg-gray-200 dark:bg-purple-900/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                <span class="text-gray-400 dark:text-purple-300 font-semibold text-sm">Imagen Producto</span>
             </div>
-            <h2 class="font-bold text-lg mb-1 leading-snug text-fcbBlue">Camiseta Local 2024/25</h2>
-            <p class="text-xs text-gray-500 mb-3">Edición oficial de juego</p>
+            <h2 class="font-bold text-lg mb-1 leading-snug">Camiseta Local 2024/25</h2>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Edición oficial de juego</p>
         </div>
         <div class="flex justify-between items-center mt-2">
-            <span class="text-xl font-black text-fcbRed">149.99 €</span>
-            <button
-                class="bg-fcbBlue hover:bg-blue-800 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">Comprar</button>
+            <span class="text-xl font-black text-fcbRed dark:text-fcbGold">149.99 €</span>
+            <button class="bg-fcbBlue hover:bg-blue-800 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">Comprar</button>
         </div>
     </div>
 
     <!-- Producto 2 -->
-    <div
-        class="bg-white text-gray-900 border border-gray-200 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col justify-between">
+    <div class="bg-white dark:bg-white/5 border border-gray-200 dark:border-purple-800/40 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col justify-between">
         <div>
-            <div class="w-full h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                <span class="text-gray-400 font-semibold text-sm">Imagen Producto</span>
+            <div class="w-full h-48 bg-gray-200 dark:bg-purple-900/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                <span class="text-gray-400 dark:text-purple-300 font-semibold text-sm">Imagen Producto</span>
             </div>
-            <h2 class="font-bold text-lg mb-1 leading-snug text-fcbBlue">Gorra FCB Oficial</h2>
-            <p class="text-xs text-gray-500 mb-3">Ajustable azulgrana</p>
+            <h2 class="font-bold text-lg mb-1 leading-snug">Gorra FCB Oficial</h2>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Ajustable azulgrana</p>
         </div>
         <div class="flex justify-between items-center mt-2">
-            <span class="text-xl font-black text-fcbRed">24.99 €</span>
-            <button
-                class="bg-fcbBlue hover:bg-blue-800 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">Comprar</button>
+            <span class="text-xl font-black text-fcbRed dark:text-fcbGold">24.99 €</span>
+            <button class="bg-fcbBlue hover:bg-blue-800 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">Comprar</button>
         </div>
     </div>
 
     <!-- Producto 3 -->
-    <div
-        class="bg-white text-gray-900 border border-gray-200 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col justify-between">
+    <div class="bg-white dark:bg-white/5 border border-gray-200 dark:border-purple-800/40 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col justify-between">
         <div>
-            <div class="w-full h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                <span class="text-gray-400 font-semibold text-sm">Imagen Producto</span>
+            <div class="w-full h-48 bg-gray-200 dark:bg-purple-900/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                <span class="text-gray-400 dark:text-purple-300 font-semibold text-sm">Imagen Producto</span>
             </div>
-            <h2 class="font-bold text-lg mb-1 leading-snug text-fcbBlue">Sudadera Training</h2>
-            <p class="text-xs text-gray-500 mb-3">Colección de invierno</p>
+            <h2 class="font-bold text-lg mb-1 leading-snug">Sudadera Training</h2>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Colección de invierno</p>
         </div>
         <div class="flex justify-between items-center mt-2">
-            <span class="text-xl font-black text-fcbRed">79.99 €</span>
-            <button
-                class="bg-fcbBlue hover:bg-blue-800 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">Comprar</button>
+            <span class="text-xl font-black text-fcbRed dark:text-fcbGold">79.99 €</span>
+            <button class="bg-fcbBlue hover:bg-blue-800 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">Comprar</button>
         </div>
     </div>
 
     <!-- Producto 4 -->
-    <div
-        class="bg-white text-gray-900 border border-gray-200 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col justify-between">
+    <div class="bg-white dark:bg-white/5 border border-gray-200 dark:border-purple-800/40 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col justify-between">
         <div>
-            <div class="w-full h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                <span class="text-gray-400 font-semibold text-sm">Imagen Producto</span>
+            <div class="w-full h-48 bg-gray-200 dark:bg-purple-900/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                <span class="text-gray-400 dark:text-purple-300 font-semibold text-sm">Imagen Producto</span>
             </div>
-            <h2 class="font-bold text-lg mb-1 leading-snug text-fcbBlue">Llavero Escudo Metal</h2>
-            <p class="text-xs text-gray-500 mb-3">Accesorio oficial</p>
+            <h2 class="font-bold text-lg mb-1 leading-snug">Llavero Escudo Metal</h2>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Accesorio oficial</p>
         </div>
         <div class="flex justify-between items-center mt-2">
-            <span class="text-xl font-black text-fcbRed">9.99 €</span>
-            <button
-                class="bg-fcbBlue hover:bg-blue-800 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">Comprar</button>
+            <span class="text-xl font-black text-fcbRed dark:text-fcbGold">9.99 €</span>
+            <button class="bg-fcbBlue hover:bg-blue-800 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">Comprar</button>
         </div>
     </div>
 
